@@ -1,0 +1,5 @@
+C:/Users/itsni/Desktop/ItsNicow/_Dev/__Unity Projects/TT - Hyperseries/.utmp/RelWithDebInfo/3zg8w3e2/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/itsni/Desktop/ItsNicow/_Dev/__Unity Projects/TT - Hyperseries/.utmp/RelWithDebInfo/3zg8w3e2/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/itsni/Desktop/ItsNicow/_Dev/__Unity Projects/TT - Hyperseries/.utmp/RelWithDebInfo/3zg8w3e2/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/itsni/Desktop/ItsNicow/_Dev/__Unity Projects/TT - Hyperseries/.utmp/RelWithDebInfo/3zg8w3e2/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/itsni/Desktop/ItsNicow/_Dev/__Unity Projects/TT - Hyperseries/.utmp/RelWithDebInfo/3zg8w3e2/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
