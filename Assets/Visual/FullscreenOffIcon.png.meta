@@ -215,7 +215,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FullscreenOffIcon_0: -8426282611248533143
+      FullscreenOffIcon_1: 4206130527568262976
+      FullscreenOffIcon_2: -1800404059896480152
+      FullscreenOffIcon_3: 940165316368720282
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
