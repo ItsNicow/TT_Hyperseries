@@ -1,7 +1,7 @@
 # Test Technique Hyperseries
 ## DISCLAIMER
 
-Lors de l'ouverture du projet, si vous rencontrez des bugs, veuillez tout d'abord changer vers la plateforme Android dans les Build Settings puis relancer le projet Unity. Le build en .apk est déjà prêt et disponible dans le dossier Builds. Il peut être ouvert et profilé avec Android Studio.
+Lors de l'ouverture du projet, si vous rencontrez des bugs, veuillez tout d'abord changer vers la plateforme *Android* dans les *Build Settings* puis relancer le projet Unity. Le build en *.apk* est déjà prêt et disponible dans le dossier *Builds*. Il peut être ouvert et profilé avec *Android Studio*.
 
 Egalement, sont inclus ci-dessous en "titre" des différentes étapes de la réalisation de l'exercice :
 
@@ -19,17 +19,17 @@ J'ai dû ici me familiariser avec les exercices, le type de projet et les nouvel
 J'ai commencé le projet par faire un setup tout simple de l'UI, correspondant à ce qui était demandé, mais sans aucun dynamisme. Je l'ai fais le plus scalable et responsive possible, mais ces problèmes se sont rélévés plus contraignants par la suite.
 
 ### Swipe : 1h00 (Recherche : 0h30)
-Après avoir regardé la vidéo en pièce jointe, j'ai passé du temps à essayer de comprendre le code avant de le recopier, tout en l'adaptant à mon workstyle. J'y ai également ajouté un cap pour ne pas dépasser des deux pages swipables entre elles. Il reste un problème que j'ai essayé en vain de résoudre : si l'on maintien le swipe trop loin, on dépasse la safe zone (on est quand même ramené à la page voulue). J'ai également rendu les boutons EDITEUR et CLIENT fonctionnels.
+Après avoir regardé la vidéo en pièce jointe, j'ai passé du temps à essayer de comprendre le code avant de le recopier, tout en l'adaptant à mon workstyle. J'y ai également ajouté un cap pour ne pas dépasser des deux pages swipables entre elles. Il reste un problème que j'ai essayé en vain de résoudre : si l'on maintien le swipe trop loin, on dépasse la safe zone (on est quand même ramené à la page voulue). J'ai également rendu les boutons *EDITEUR* et *CLIENT* fonctionnels.
 
 ### Video Player : 3h (Recherche : 1h & Assets : 0h30)
-Ceci étant tout nouveau pour moi, j'ai dû d'abord me familiariser avec l'affichage d'une vidéo. S'en suivit le contrôle du temps (slider, pause, play, restart), puis l'UI (fade in, fade out, temps) sur lequel il reste quelques imperfections si les actions sont performées trop vite. J'ai essayé pendant longtemps d'intégrer le lecteur horizontal automatique avec détection de l'orientation du téléphone, mais ne pouvant pas éxecuter l'APK sur mon téléphone, je n'ai pas pu tester cette fonction (je l'ai laissée en commentaire sans y retoucher).
+Ceci étant tout nouveau pour moi, j'ai dû d'abord me familiariser avec l'affichage d'une vidéo. S'en suivit le contrôle du temps (slider, pause, play, restart), puis l'UI (fade in, fade out, temps) sur lequel il reste quelques imperfections si les actions sont performées trop vite. J'ai essayé pendant longtemps d'intégrer le lecteur horizontal automatique avec détection de l'orientation du téléphone, mais ne pouvant pas éxecuter l'*apk* sur mon téléphone, je n'ai pas pu tester cette fonction (je l'ai laissée en commentaire sans y retoucher).
 
 ### Series Info Panel Dépliable : 2h30 (Assets : 0h05)
 Aaaah les UI responsives, mon pire ennemi. Tout se passait bien jusqu'à ce qu'il faille que je fasse en sorte que les infos de la série soient dépliables et repliables. J'ai eu de gros problèmes pour comprendre pourquoi en 1920x1080 il ne se déplaçait pas comme en 2560x1440 par exemple. Après de longues heures de réflexion, plusieurs siestes, une demi-douzaine de bonnes doses de café, la réponse m'a sauté aux yeux. J'ai immédiatement calculé le ratio hauteur de l'écran / taille du déplacement voulu et toc ! Tout marchait soudainement. J'avais en fait remarqué après un test que mon UI bougeait de 200 pixels constamment, peu importe la taille de l'écran. Il fallait donc que je calcule le déplacement voulu, par rapport au ratio de base de 200/1920.
 *Fix : il n'y avait pas besoin du ratio, simplement de la position originale, puis d'y ajouter un déplacement voulu avant d'y revenir...*
 
 ### Episodes Panel : 0h30  (Assets : 0h10)
-J'ai commencé par tranquillement setup mon UI, dont mon Scroll Rect, Grid Layout, j'ai ajusté pendant quelques minutes les Content Size Fitters ainsi que les paramètres divers d'ancrage afin que ce panel soit au plus responsive. J'ai reglé quelques masques pour également que le Viewport ne dépasse pas sur le reste lors du dépliage du Series Info Panel.
+J'ai commencé par tranquillement setup mon UI, dont mon *Scroll Rect*, *Grid Layout*, j'ai ajusté pendant quelques minutes les Content Size Fitters ainsi que les paramètres divers d'ancrage afin que ce panel soit au plus responsive. J'ai reglé quelques masques pour également que le Viewport ne dépasse pas sur le reste lors du dépliage du *Series Info Panel*.
 
 ### Episode Class & Episodes Manager : 1h30
 Je me suis ensuite atelé à la gestion des épisodes. Ceci fut relativement simple puisque j'avais déjà eu à faire à des situations similaires auparavant. Je suppose que le manque de cafféine a dû me ralentir, haha. :) Il reste encore quelques bugs lorsque par exemple on ouvre le menu pause avant de changer de clip. J'ai essayé de les résoudre, mais cela ne marchait pas, et considérant cela comme quelque chose de relativement mineur (et qui surtout ne devrait pas acaparer tout mon temps), je les ai laissés de côté. J'ai également mis en place la création de nouveaux épisode via la page editeur. Ils ont une thumbnail par défaut ainsi qu'une vidéo par défaut, puisque ces paramètres ne peuvent être manuellement renseignés. S'en suivit l'indication de quel épisode est sélectionné par un petit grisage et hop, le travail était finit.
@@ -47,7 +47,7 @@ Cette étape était particulièrement difficile, étant pour moi toute nouvelle.
 J'ai ici mis en place et rendu fonctionnel le bouton permettant de passer le lecteur en mode horizontal et plein écran. Ca a été particulièrement difficile de trouver quelles valeurs il fallait changer, comment, et par rapport à quoi, mais après recherche j'ai de suite trouvé les résultats, malgré avoir longtemps tâtonné par moi-même.
 
 ### Fullscreen Detect Rotate : 0h30
-J'ai ici ressayé d'implémenter la détection de l'orientation du téléphone, et ça s'est beaucoup mieux passé avec mon nouveau système de fullscreen.J'ai également lock cette feature quand l'utilisateur appuie sur le bouton fullscreen, pour pas empêcher le fullscreen de se mettre correctement. Quelques tests, et c'était fini.
+J'ai ici ressayé d'implémenter la détection de l'orientation du téléphone, et ça s'est beaucoup mieux passé avec mon nouveau système de fullscreen. J'ai également lock cette feature quand l'utilisateur appuie sur le bouton fullscreen, pour pas empêcher le fullscreen de se mettre correctement. Quelques tests, et c'était fini.
 
 ### TEMPS TOTAL : 19h (Recherches : 5h & Assets : 0h50 & Installations : 1h30)
 
