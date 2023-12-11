@@ -5,9 +5,7 @@ Lors de l'ouverture du projet, si vous rencontrez des bugs, veuillez tout d'abor
 
 Egalement, sont inclus ci-dessous en "titre" des différentes étapes de la réalisation de l'exercice :
 
-ETAPE : TEMPS (TEMPS RECHERCHE & TEMPS RECHERCHE / CREATION ASSETS)
-
-DESCRIPTION / APPROCHE / RESSENTI
+ETAPE : TEMPS (TEMPS RECHERCHE & TEMPS RECHERCHE / CREATION ASSETS) puis DESCRIPTION / APPROCHE / RESSENTI
 
 Les temps entre parenthèses font partie du temps total.
 
@@ -26,7 +24,8 @@ Après avoir regardé la vidéo en pièce jointe, j'ai passé du temps à essaye
 Ceci étant tout nouveau pour moi, j'ai dû d'abord me familiariser avec l'affichage d'une vidéo. S'en suivit le contrôle du temps (slider, pause, play, restart), puis l'UI (fade in, fade out, temps) sur lequel il reste quelques imperfections si les actions sont performées trop vite. J'ai essayé pendant longtemps d'intégrer le lecteur horizontal automatique avec détection de l'orientation du téléphone, mais ne pouvant pas éxecuter l'*apk* sur mon téléphone, je n'ai pas pu tester cette fonction (je l'ai laissée en commentaire sans y retoucher).
 
 ### Series Info Panel Dépliable : 2h30 (Assets : 0h05)
-Aaaah les UI responsives, mon pire ennemi. Tout se passait bien jusqu'à ce qu'il faille que je fasse en sorte que les infos de la série soient dépliables et repliables. J'ai eu de gros problèmes pour comprendre pourquoi en 1920x1080 il ne se déplaçait pas comme en 2560x1440 par exemple. Après de longues heures de réflexion, plusieurs siestes, une demi-douzaine de bonnes doses de café, la réponse m'a sauté aux yeux. J'ai immédiatement calculé le ratio hauteur de l'écran / taille du déplacement voulu et toc ! Tout marchait soudainement. J'avais en fait remarqué après un test que mon UI bougeait de 200 pixels constamment, peu importe la taille de l'écran. Il fallait donc que je calcule le déplacement voulu, par rapport au ratio de base de 200/1920.\n
+Aaaah les UI responsives, mon pire ennemi. Tout se passait bien jusqu'à ce qu'il faille que je fasse en sorte que les infos de la série soient dépliables et repliables. J'ai eu de gros problèmes pour comprendre pourquoi en 1920x1080 il ne se déplaçait pas comme en 2560x1440 par exemple. Après de longues heures de réflexion, plusieurs siestes, une demi-douzaine de bonnes doses de café, la réponse m'a sauté aux yeux. J'ai immédiatement calculé le ratio hauteur de l'écran / taille du déplacement voulu et toc ! Tout marchait soudainement. J'avais en fait remarqué après un test que mon UI bougeait de 200 pixels constamment, peu importe la taille de l'écran. Il fallait donc que je calcule le déplacement voulu, par rapport au ratio de base de 200/1920.
+
 *Fix : il n'y avait pas besoin du ratio, simplement de la position originale, puis d'y ajouter un déplacement voulu avant d'y revenir...*
 
 ### Episodes Panel : 0h30  (Assets : 0h10)
